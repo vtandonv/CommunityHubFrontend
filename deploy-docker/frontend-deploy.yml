@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of frontend
+  hosts: all
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: vtandonv/communityhubfrontend
+        source: pull
