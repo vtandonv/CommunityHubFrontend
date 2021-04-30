@@ -1,0 +1,90 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+           
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+
+                <!-- customer form group -->
+                <div formGroupName="customer" class="form-area">
+                    <h3>Student Details</h3>
+
+                    <div class="row">
+                        <div class="col-md-2"><label>First Name</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="firstName" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"><label>Last Name</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="lastName" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"><label>Email</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="email" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Delivery Address-->
+
+                <div formGroupName="deliveryAddress" class="form-area">
+                    <h3>On Campus Location</h3>
+
+                    <div class="row">
+                        <div class="col-md-2"><label>Hostel Name</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="hostel" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"><label>Room Number</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="room" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"><label>Mobile Number</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="mob" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Details-->
+                <div class="form-area">
+                    <h3>Review your order</h3>
+
+                    <p>Total Quantity: {{ totalQuantity }}</p>
+                    <p>Total Price: {{ totalPrice | currency: 'USD'}}</p>
+
+                </div>
+
+
+               <!--submit button-->
+               <div class="text-center">
+                   <button type="submit" class="btn btn-info">Purchase</button>
+               </div>
+            
+            </form>
+        </div>
+    </div>
+</div>
