@@ -6,3 +6,12 @@
       docker_image:
         name: vtandonv/communityhubfrontend
         source: pull
+     
+     - name: Create front-end container
+       docker_container:
+        name: angular-con1
+        image: vtandonv/communityhubfrontend
+        ports:
+          - "4200:4200"
+ 
+ 
